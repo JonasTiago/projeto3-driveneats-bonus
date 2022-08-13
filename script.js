@@ -48,7 +48,11 @@ function pedidosEscolhidos(pedidoEscolhido){
 }
 
 let precoFinal;
+let nome;
+let endereço;
 function confirmarPedido(){
+  nome = prompt("Seu nome:")
+  endereço = prompt("Seu endereço:")
   let confimar = document.querySelector('.confimacao')
   confimar.classList.toggle('invisivel')
   let pratoFinal = document.querySelector('.confimacao > div > div p:nth-child(1)')
@@ -71,7 +75,10 @@ function enviarPedido() {
   - Prato: ${pratoEscolhido[0]}
   - Bebida: ${bebidasEscolhido[0]}
   - Sobremesa: ${sobremesaEscolhido[0]}
-  Total: R$ ${precoFinal.toFixed(2)}`
+  Total: R$ ${precoFinal.toFixed(2)}
+
+  Nome: ${nome}
+  Endereço: ${endereço}`
   mensagemAuto = encodeURIComponent(mensagem);
   window.open(`https://wa.me/5585998000067?text=${mensagemAuto}`)
   location.reload()
