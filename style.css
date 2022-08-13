@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* font-family: 'Righteous', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+/*cabecario*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #E5E5E5;
+}
+
+header {
+    z-index: 20;
+    position: fixed;
+    top :0;
+    left: 0;
+    background-color: #CF2B2B;
+    width: 100vw;
+    height: 95px;
+    color: #fff;
+}
+
+header > h1 {
+    font-family: 'Righteous', cursive;
+    margin: 20px 0 0 20px;
+    font-size: 44px;
+    letter-spacing: -1,2%;
+}
+
+header > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 0 0 0 20px;
+    line-height: 21px;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+.prato-section {
+    margin: 123px 0 0 20px;
+
+}
+
+.section-titulo {
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 1.8%;
+    font-family: 'Righteous', cursive;
+}
+
+.options {
+    border: transparent;
+    overflow-x: scroll;
+    display: flex;
+}
+
+.options::-webkit-scrollbar{
+    display: none;
+}
+
+.option {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:10px 15px  20px 0px;
+    height: 216px;
+    width: 180px;
+    padding: 10px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.23);
+    border-radius: 9px;
+    border: 5px solid transparent;
+}
+
+.option img {
+    width: 144px;
+    height: 87px;
+    border-radius: 5px; 
+}
+
+.option h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.option  > :nth-child(3) {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    margin: 5px 0;
+
+}
+
+.option  > :nth-child(4) {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.bebida-section {
+    margin: 20px 0 0 20px;   
+}
+
+.sobremesa-section {
+    margin: 20px 0 110px 20px;   
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    height: 92px;
+    width: 100vw;
+    text-align: center;
+    padding: 0 10px;
+}
+
+footer button {
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 20px;
+    background-color: #CBCBCB;
+    color: #fff;
+    font-weight: 400;
+    margin: 15px auto 0 auto;
+    border-color: transparent;
+    
+}
+
+ion-icon {
+    display: none;
+}
+
+.selecionado {
+    border-color:#32B72F;
+}
+
+.selecionado > ion-icon {
+    display: initial;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #32B72F;
+    font-size: 20px;
+}
+
+.liberado {
+    background-color: #32B72F;
+    border:1px solid #1a7a19;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.384);
+    font-weight: bold;
+}
+
+.invisivel {
+    display: none;
+}
+.confimacao {
+    z-index: 200;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+.confimacao .pedido-final {
+    position: fixed;
+    top: 30%;
+    right: calc((100vw - 370px)/2);
+    background-color: #50D074;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+    border-radius: 10px;
+    width: 370px;
+    height: 353px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.pedido-final h2{
+    font-weight: 600;
+    font-size: 22px;
+    color: #fff;
+}
+
+.pedido-final div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 30px;
+}
+
+.pedido-final div > p{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.pedido-final div > p:last-child{
+    text-transform: uppercase; 
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+} 
+
+.pedido-final .confirmar{
+    width: 333px;
+    height: 52px;
+    color: #50D074;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: #fff;
+    border-radius: 100px;
+    border: none;
+    margin: 0 auto;
+}
+
+.pedido-final .cancelar{
+    line-height: 23.44px;
+    background-color: #50D074;
+    border: none;
+    color: #fff;
+    letter-spacing: 1.8%;
+    font-weight: 700;
+    font-size: 20px;
+}
